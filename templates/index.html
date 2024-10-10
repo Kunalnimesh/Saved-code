@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndianOil Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header and content -->
+    <header>
+        <div class="header-logo">
+            <img src="indianoil-logo.png" alt="IndianOil Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">IndianOil For You</a></li>
+                <li><a href="#">IndianOil For Environment</a></li>
+                <li><a href="#">We Are Listening</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="hero-banner">
+            <h1>Welcome to IOCL</h1>
+        </div>
+
+        <div class="announcements">
+            <h2>What's New</h2>
+            <ul>
+                <li>Revised SKO Non PDS Prices</li>
+                <li>Revised Petrol and Diesel Build-up Price</li>
+                <li>Engagement of Retainer Doctor at SRPL</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Chatbot Icon and Window -->
+    <div id="chatbot-container">
+        <div id="chatbot-icon" onclick="toggleChatbot()">
+            <img src="chatbot.png" alt="IOCL Bot Icon">
+        </div>
+        <div id="chatbot-window" class="hidden">
+            <div class="chatbot-header">
+                <h3>IOCL Bot</h3>
+                <button onclick="toggleChatbot()">X</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chat-input" placeholder="Ask your question here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
